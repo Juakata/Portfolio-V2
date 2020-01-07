@@ -84,8 +84,8 @@ ul {
   left: 0;
   right: 0;
   margin: auto;
-  background: #ddd8eb;
-  color: #4a0078;
+  background: #abb1c9;
+  color: #001052;
   text-shadow: 1px 1px 1px white;
   box-shadow: 0 0 8px #190033;
 }
@@ -94,9 +94,13 @@ ul {
   text-align: center;
 }
 
+.title1:hover {
+  color: #001052;
+}
+
 .info-div {
   padding: 50px;
-  background: #ddd8eb;
+  background: #abb1c9;
   color: #0d0017;
   font-size: 18px;
 }
@@ -110,7 +114,7 @@ ul {
 .abilities {
   position: relative;
   background: #190033;
-  color: #c4b8d1;
+  color: #abb1c9;
   border-radius: 15px;
   padding: 15px;
   font-size: 30px;
