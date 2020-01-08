@@ -171,7 +171,7 @@ ul {
 
 .go-icon {
   position: absolute;
-  width: 154px;
+  width: 160px;
   top: 0;
   left: 0;
   right: 0;
@@ -213,5 +213,19 @@ ul {
 
   .abilities {
     margin-top: 20px;
+  }
+
+  .info-div {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .abilities {
+    font-size: 25px;
+  }
+
+  .go-icon {
+    width: 113px;
+    font-size: 50px;
   }
 }
