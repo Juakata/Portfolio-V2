@@ -3,7 +3,7 @@
 <h2 class="title1">── My Story ──</h2>
 <div class="info-div grid-2">
   <p>
-    Hi, I'm Andoni from El Salvador. I design and build user interfaces an love to code with people around
+    Hi, I'm Andoni from El Salvador. I design and build user interfaces and love to code with people around
     the world. Thanks to <a href="https://www.microverse.org/">Microverse</a> I was able to work with people from Brazil, India, Mexico, Kenia, Colombia and United States. I have
     learned plenty of cool things from them while working in the projects and of course always
     doing our best in every single one.
@@ -19,73 +19,13 @@
 </div>
 
 <h2 class="title1">── HTML & CSS ──</h2>
-<div class="info-div grid-2">
-  <div class="project">
-    <img src="<%= asset_path('projects/apple-project.png') %>" class="img-class" alt="Apple">
-    <p class="p-project">
-      This project is a copy of the home page of Apple website.
-    </p>
-    <a class="block-cover"></a>
-    <div class="go-icon">
-      <a href="https://github.com/Juakata/Apple-Website" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://raw.githack.com/Juakata/Apple-Website/master/index.html" target="_blank"><i class="fas fa-globe"></i></a>
-    </div>
-  </div>
-  <div class="project">
-    <img src="<%= asset_path('projects/NYT-project.png') %>" class="img-class" alt="NYT">
-    <p class="p-project">
-      This project is a copy of the home page of New York Time website.
-    </p>
-    <a class="block-cover"></a>
-    <div class="go-icon">
-      <a href="https://github.com/Juakata/New-York-Times-article" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://raw.githack.com/Juakata/New-York-Times-article/master/index.html" target="_blank"><i class="fas fa-globe"></i></a>
-    </div>
-  </div>
-  <div class="project">
-    <img src="<%= asset_path('projects/smashing-project.png') %>" class="img-class" alt="smashing">
-    <p class="p-project">
-      This project is a copy of the home page of Smashing Magazine website.
-    </p>
-    <a class="block-cover"></a>
-    <div class="go-icon">
-      <a href="https://github.com/Juakata/Smashing-Magazine" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://raw.githack.com/hugopassos/Smashing-Magazine/master/smashingmagazine.html" target="_blank"><i class="fas fa-globe"></i></a>
-    </div>
-  </div>
-  <div class="project">
-    <img src="<%= asset_path('projects/news-project.png') %>" class="img-class" alt="news">
-    <p class="p-project">
-      This project is a copy of the home page of Newsweek website, using bootstrap.
-    </p>
-    <a class="block-cover"></a>
-    <div class="go-icon">
-      <a href="https://github.com/Juakata/Newsweek-Bootstrap" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://raw.githack.com/Juakata/Newsweek-Bootstrap/master/index.html" target="_blank"><i class="fas fa-globe"></i></a>
-    </div>
-  </div>
-  <div class="project">
-    <img src="<%= asset_path('projects/NW-project.png') %>" class="img-class" alt="NW">
-    <p class="p-project">
-      This project is a copy of the home page of The Next Web website.
-    </p>
-    <a class="block-cover"></a>
-    <div class="go-icon">
-      <a href="https://github.com/Juakata/Next-Web" target="_blank<a>"><i class="fab fa-github"></i></a>
-      <a href="https://raw.githack.com/Juakata/Next-Web/master/index.html" target="_blank<a>"><i class="fas fa-globe"></i></a>
-    </div>
-  </div>
-  <div class="project">
-    <img src="<%= asset_path('projects/framework-project.png') %>" class="img-class" alt="framework">
-    <p class="p-project">
-      This project is a home page that was built using a personal framework like bootstrap.
-    </p>
-    <a class="block-cover"></a>
-    <div class="go-icon">
-      <a href="https://github.com/Juakata/Grid-Based-Framework " target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://raw.githack.com/hugopassos/Grid-Based-Framework/master/index.html" target="_blank"><i class="fas fa-globe"></i></a>
-    </div>
-  </div>
-</div>
+<%= render 'htmlcss' %>
 
 <h2 class="title1">── Ruby ──</h2>
+<%= render 'ruby' %>
+
+<h2 class="title1">── Ruby on Rails ──</h2>
+<%= render 'rails' %>
+
+<h2 class="title1">── Javascript ──</h2>
+<%= render 'javascript' %>
