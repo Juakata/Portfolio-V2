@@ -23,6 +23,14 @@ ul {
   list-style: none;
 }
 
+footer {
+  padding: 30px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  background: linear-gradient(to bottom, #0a001c, #0d0024, #11002e, #17003d, #1f0052, #0a001c, #0d0024);
+}
+
 /** Media Icons **/
 
 .myfa {
@@ -206,6 +214,71 @@ ul {
   color: #4287f5;
 }
 
+.new_comment {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 45px;
+  background: #190033;
+  color: #abb1c9;
+  padding: 50px 0 20px 0;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.form-element {
+  padding: 10px;
+  text-align: center;
+}
+
+.form-element input, textarea {
+  border-radius: 10px;
+  outline: none;
+  padding-left: 10px;
+  font-family: sans-serif;
+}
+
+.form-element input {
+  max-width: 250px;
+}
+
+.form-element textarea {
+  max-width: 320px;
+  height: 80px;
+}
+
+.form-element input[type="submit"] {
+  background: #731629;
+  border: none;
+  text-align: center;
+  width: 70px;
+  border-radius: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #e09dab;
+  transition: width .5s, background .5s, color .5s;
+}
+
+.form-element input[type="submit"]:hover {
+  width: 200%;
+  color: #731629;
+  background: #e09dab;
+}
+
+.icon-comment {
+  color: #abb1c9;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -35px;
+  text-align: center;
+  font-size: 70px;
+  z-index: 10;
+  text-shadow: 1px 1px 8px black;
+}
+
 /** Media Queries **/
 @media(max-width: 700px) {
   .grid-2 {
@@ -228,5 +301,12 @@ ul {
   .go-icon {
     width: 113px;
     font-size: 50px;
+  }
+}
+
+@media(max-width: 420px) {
+  .new_comment {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
