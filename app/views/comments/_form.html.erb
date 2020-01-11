@@ -1,4 +1,17 @@
-<%= form_for(@comment, class: "form") do |f| %>
+<%= form_for(@comment) do |f| %>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+  <% if @comment.errors.any? %>
+    <ul class="erros">
+      <% @comment.errors.full_messages.each do |ms| %>
+         <li> <%= ms %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div class="icon-comment">
+    <i class="fas fa-comments"></i>
+  </div>
   <div class="form-element">
     <%= f.label :name %>
     <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "field_group" %>
@@ -12,8 +25,5 @@
   </div>
   <div class="form-element">
   <%= f.submit "Send" %>
-  </div>
-  <div class="icon-comment">
-    <i class="fas fa-comments"></i>
   </div>
 <% end %>

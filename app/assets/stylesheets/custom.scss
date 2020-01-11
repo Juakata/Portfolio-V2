@@ -214,7 +214,7 @@ footer {
   color: #4287f5;
 }
 
-.new_comment, .form {
+.new_comment, .form, .edit_comment {
   position: relative;
   max-width: 400px;
   margin: 0 auto;
@@ -279,6 +279,11 @@ footer {
   text-shadow: 1px 1px 8px black;
 }
 
+.erros {
+  text-align: center;
+  color: brown;
+}
+
 /** Media Queries **/
 @media(max-width: 700px) {
   .grid-2 {
@@ -302,6 +307,11 @@ footer {
     width: 113px;
     font-size: 50px;
   }
+}
+
+.notice {
+  text-align: center;
+  color: green;
 }
 
 @media(max-width: 420px) {

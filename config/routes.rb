@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  root 'comments#index'
   resources :comments
   resources :users
-  get '/signin', to: 'sessions#new'
+  get '/signin', to: 'sessions#new', as: 'sign_in'
   post '/signin', to: 'sessions#create'
 
 end

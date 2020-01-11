@@ -1,1 +1,6 @@
-<h1> <%= @user.name %> </h1>
+<% @current_user.comments.each do |comment| %>
+  <h3><%= comment.name %></h3>
+  <h3><%= comment.email %></h3>
+  <p><%= comment.body %></p>
+  <br><br>
+<% end %>
