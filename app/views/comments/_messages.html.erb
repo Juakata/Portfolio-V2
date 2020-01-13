@@ -1,0 +1,8 @@
+<% @messages.each do |msg| %>
+  <article class="message-div">
+    <h3 clas="h3-name"><%= msg.name %></h3>
+    <a href = "mailto: <%= msg.email %>">Answer to <%= msg.email %></a>
+    <p><%= msg.body %></p>
+    <span class="time-sent">Sent at <%= msg.created_at %></span>
+  </article>
+<% end %>

@@ -16,6 +16,10 @@ class CommentsController < ApplicationController
     end
   end
 
+  def all_messages
+    @messages = User.first.comments.order(created_at: :desc)
+  end
+
   private
 
   def comment_params

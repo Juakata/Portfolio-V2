@@ -33,6 +33,11 @@ footer {
   background: linear-gradient(to bottom, #0a001c, #0d0024, #11002e, #17003d, #1f0052, #0a001c, #0d0024);
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 /** Media Icons **/
 
 .myfa {
@@ -102,6 +107,17 @@ footer {
 
 .photo:hover {
   transform: scale(1.2);
+}
+
+.li-user {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.ul-user {
+  align-items: center;
 }
 
 /** body **/
@@ -303,6 +319,43 @@ footer {
 .notice {
   text-align: center;
   color: green;
+}
+
+.user-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.message-div {
+  position: relative;
+  background: #000324;
+  padding: 15px;
+  color: #e3e5ff;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 0 5px black;
+}
+
+.message-div h3 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.time-sent {
+  font-size: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.message-div p {
+  background: #ccdaff;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000d2e;
 }
 
 /** Media Queries **/
