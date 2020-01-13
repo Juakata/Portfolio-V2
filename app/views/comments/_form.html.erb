@@ -1,7 +1,5 @@
-<%= form_for(@comment) do |f| %>
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
+<%= form_for(@comment, remote: true, html: {id: 'comment_form'}) do |f| %>
+<div class="notice" id="notice_message"></div>
   <% if @comment.errors.any? %>
     <ul class="erros">
       <% @comment.errors.full_messages.each do |ms| %>

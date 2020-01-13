@@ -7,8 +7,10 @@ class CommentsController < ApplicationController
     @user = User.first
     @comment = @user.comments.build(comment_params)
     if @comment.save
-      flash[:notice] = "Thanks for contacting me!"
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to root_path }
+      format.js
+    end
     else
       render 'index'
     end
