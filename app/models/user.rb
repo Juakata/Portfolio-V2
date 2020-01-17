@@ -2,8 +2,10 @@ class User < ApplicationRecord
   attr_accessor :remember_token
   validates :name, presence: true
   validates :password, presence: true
-  has_many :comments
-  has_many :areas
+  has_many :comments, dependent: :delete_all
+  has_many :areas, dependent: :delete_all
+  has_one :profile, dependent: :destroy
+  has_one :network, dependent: :destroy
 
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

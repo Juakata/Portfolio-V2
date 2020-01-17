@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   def index
     @comment = Comment.new
+    @user = User.first
   end
 
   def create

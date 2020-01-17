@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gihub: MyString
+  linkedin: MyString
+  gmail: MyString
+  twitter: MyString
+  instagram: MyString
+  user_id: 1
+
+two:
+  gihub: MyString
+  linkedin: MyString
+  gmail: MyString
+  twitter: MyString
+  instagram: MyString
+  user_id: 1

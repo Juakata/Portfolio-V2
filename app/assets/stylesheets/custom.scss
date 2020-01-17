@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+* {
+  outline: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -174,8 +178,8 @@ a {
   cursor: pointer;
 }
 
-.abilities li:hover {
-  color: white;
+.abilities li a:hover {
+  color: #a6c2ff;
 }
 
 .img-class {
@@ -358,6 +362,58 @@ a {
   color: #000d2e;
 }
 
+.skills-saved {
+  height: auto;
+  max-height: 300px;
+  background: #00004a;
+  color: white;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px black;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.skills-saved li {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.skills-saved li:hover {
+  background: blue;
+}
+
+.skills-saved li a {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.skills-saved li a:hover {
+  color: red;
+}
+
+.form-areas {
+  height: 170px;
+}
+
+.form-areas .form-element input[type="submit"] {
+  width: 100px;
+}
+
+.form-areas .form-element input[type="submit"]:hover {
+  width: 100%;
+}
+
+.profile-form {
+  max-width: 700px;
+}
+
 /** Media Queries **/
 @media(max-width: 700px) {
   header {
@@ -389,11 +445,19 @@ a {
     width: 113px;
     font-size: 50px;
   }
+
+  .li-user {
+    font-size: 20px;
+  }
 }
 
 @media(max-width: 420px) {
   .new_comment {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .li-user {
+    font-size: 15px;
   }
 }

@@ -2,22 +2,21 @@
 <main>
   <h2 class="title1">── My Story ──</h2>
   <div class="info-div grid-2">
-    <p>
-      Hi, I'm Andoni from El Salvador. I design and build user interfaces and love to code with people around
-      the world. Thanks to <a href="https://www.microverse.org/">Microverse</a> I was able to work with people from Brazil, India, Mexico, Kenia, Colombia and United States. I have
-      learned plenty of cool things from them while working in the projects and of course always
-      doing our best in every single one.
-    </p>
+    <% if @user.profile %>
+      <%= simple_format(@user.profile.intro, wrapper_tag: "p") %>
+    <% else %>
+      <p>No story created.</p>
+    <% end %>
     <ul class="abilities">
       <li id="main-areas">Proficient in</li>
-      <li><a href="#html-title">● HTML & CSS </a></li>
-      <li><a href="#ruby">● Ruby </a></li>
-      <li><a href="#rails">● Ruby on Rails </a></li>
-      <li><a href="#js">● JS </a></li>
-      <li><a href="#">● React & Redux </a></li>
+      <% @user.areas.each do |area| %>
+        <li><a href="#area-<%= area.id %>">● <%= area.name %> </a></li>
+      <% end %>
     </ul>
   </div>
+  <% @user.areas.each do |area| %>
 
+  <% end %>
   <h2 class="title1" id="html-title">── HTML & CSS ──</h2>
   <section>
     <%= render 'htmlcss' %>

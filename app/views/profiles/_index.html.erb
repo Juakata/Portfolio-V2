@@ -1,0 +1,44 @@
+<% @profile = @profile_created if @profile_created %>
+<%= form_for(@profile, html: {class: 'form profile-form'}) do |f| %>
+  <div class="form-element">
+    <%= f.file_field :photo %>
+  </div>
+  <div class="form-element">
+    <%= f.text_area :intro %>
+  </div>
+  <div class="form-element">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
+
+<% @network = @network_created if @network_created %>
+<%= form_for(@network, html: {class: 'form profile-form'}) do |f| %>
+  <div class="form-element">
+    <%= f.label :github %>
+    <%= f.text_field :github %>
+  </div>
+
+  <div class="form-element">
+    <%= f.label :linkedin %>
+    <%= f.text_field :linkedin %>
+  </div>
+
+  <div class="form-element">
+    <%= f.label :gmail %>
+    <%= f.text_field :gmail %>
+  </div>
+
+  <div class="form-element">
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter %>
+  </div>
+
+  <div class="form-element">
+    <%= f.label :instagram %>
+    <%= f.text_field :instagram %>
+  </div>
+
+  <div class="form-element">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
