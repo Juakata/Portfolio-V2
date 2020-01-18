@@ -15,6 +15,11 @@ class AreasController < ApplicationController
     redirect_to current_user
   end
 
+  def form_project
+    @project = Project.new
+    @area = current_user.areas.find(params[:id])
+  end
+
   private
 
   def area_params

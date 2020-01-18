@@ -9,11 +9,13 @@
     </a></li>
   </ul>
   <ul class="ul-header">
-    <li class="li-icon"><a href="https://github.com/Juakata" target="_blank"><i class="fab fa-github-square myfa"></i></a></li>
-    <li class="li-icon"><a href="https://sv.linkedin.com/in/andoni-uzquiano-31304818a" target="_blank"><i class="fab fa-linkedin myfa"></i></a></li>
-    <li class="li-icon"><a href="mailto:Juakata07@gmail.com" target="_blank"><i class="fas fa-envelope myfa"></i></a></li>
-    <li class="li-icon"><a href="https://twitter.com/HUzquiano" target="_blank"><i class="fab fa-twitter-square myfa"></i></a></li>
-    <li class="li-icon"><a href="https://www.instagram.com/uzquiano007/?hl=es-la" target="_blank"><i class="fab fa-instagram myfa"></i></a></li>
+    <% if @user.network %>
+      <li class="li-icon"><a href="<%= @user.network.github %>" target="_blank"><i class="fab fa-github-square myfa"></i></a></li>
+      <li class="li-icon"><a href="<%= @user.network.linkedin %>" target="_blank"><i class="fab fa-linkedin myfa"></i></a></li>
+      <li class="li-icon"><a href="mailto:<%= @user.network.gmail %>" target="_blank"><i class="fas fa-envelope myfa"></i></a></li>
+      <li class="li-icon"><a href="<%= @user.network.twitter %>" target="_blank"><i class="fab fa-twitter-square myfa"></i></a></li>
+      <li class="li-icon"><a href="<%= @user.network.instagram %>" target="_blank"><i class="fab fa-instagram myfa"></i></a></li>
+    <% end %>
   </ul>
   <img class="img-back-header" src="<%= asset_path('coding.jpg') %>" alt="coding">
 </header>

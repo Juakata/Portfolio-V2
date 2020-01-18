@@ -5,6 +5,11 @@ class NetworksController < ApplicationController
     redirect_to current_user
   end
 
+  def update
+    @network = current_user.network.update(network_params)
+    redirect_to current_user
+  end
+
   private
 
   def network_params

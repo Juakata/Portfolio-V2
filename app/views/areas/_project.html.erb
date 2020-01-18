@@ -1,0 +1,21 @@
+  <h2 class="title1 white-block">
+    ── <%= @area.name %> ──
+  </h2>
+  <%= form_for(@project, html: {class: 'form project_form'}) do |f| %>
+    <%= f.hidden_field :area_id, value: @area.id %>
+    <div class="form-element">
+      <%= f.file_field :image %>
+    </div>
+    <div class="form-element">
+      <%= f.text_area :description %>
+    </div>
+    <div class="form-element">
+      <%= f.text_field :github %>
+    </div>
+    <div class="form-element">
+      <%= f.text_field :live %>
+    </div>
+    <div class="form-element">
+      <%= f.submit "Save" %>
+    </div>
+  <% end %>

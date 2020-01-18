@@ -184,6 +184,7 @@ a {
 
 .img-class {
   width: 100%;
+  height: 100%;
   border-radius: 15px;
   box-shadow: 0 0 13px black;
 }
@@ -191,6 +192,8 @@ a {
 .project {
   position: relative;
   cursor: pointer;
+  width: 100%;
+  height: 400px;
 }
 
 .p-project {
@@ -388,10 +391,14 @@ a {
   background: blue;
 }
 
-.skills-saved li a {
+.skills-saved li .fa-trash {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.skills-saved li .fa-trash:hover {
+  color: red;
 }
 
 .skills-saved li a:hover {
@@ -412,6 +419,18 @@ a {
 
 .profile-form {
   max-width: 700px;
+}
+
+.white-block {
+  background: white;
+  box-shadow: 1px 1px 10px black;
+  padding: 5px;
+}
+
+.project_form {
+  max-width: 100%;
+  margin: 0;
+  margin-top: 0;
 }
 
 /** Media Queries **/
