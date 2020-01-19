@@ -1,4 +1,6 @@
 class NetworksController < ApplicationController
+  before_action :log_in?
+  
   def create
     @network = current_user.build_network(network_params)
     @network.save

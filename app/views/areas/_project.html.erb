@@ -4,7 +4,7 @@
   <%= form_for(@project, html: {class: 'form project_form'}) do |f| %>
     <%= f.hidden_field :area_id, value: @area.id %>
     <div class="form-element">
-      <%= f.file_field :image %>
+      <%= f.file_field :image, accept: 'image/jpg,image/gif,image/png'  %>
     </div>
     <div class="form-element">
       <%= f.text_area :description %>
@@ -19,3 +19,13 @@
       <%= f.submit "Save" %>
     </div>
   <% end %>
+
+<script type="text/javascript">
+  const file = document.getElementById('project_image');
+  file.addEventListener('change', () => {
+    let size_in_megabytes = file.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  }, false);
+</script>

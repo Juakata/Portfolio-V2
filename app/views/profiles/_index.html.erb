@@ -1,7 +1,18 @@
+<div class="maintenance center">
+  Maintenance
+  <div class="margin-top">
+    <% if current_user.maintenance %>
+      <%= link_to "Activate", activate_path, class: 'act-normal normal' %><%= link_to "Deactivate", deactivate_path, class: 'normal deact' %>
+    <% else %>
+      <%= link_to "Activate", activate_path, class: 'normal act' %><%= link_to "Deactivate", deactivate_path, class: 'deact-normal normal' %>
+    <% end %>
+  </div>
+</div>
+
 <% @profile = @profile_created if @profile_created %>
 <%= form_for(@profile, html: {class: 'form profile-form'}) do |f| %>
   <div class="form-element">
-    <%= f.file_field :photo %>
+    <%= f.file_field :photo, accept: 'image/jpg,image/gif,image/png'  %>
   </div>
   <div class="form-element">
     <%= f.text_area :intro %>
@@ -42,3 +53,13 @@
     <%= f.submit "Save" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  const file = document.getElementById('profile_photo');
+  file.addEventListener('change', () => {
+    let size_in_megabytes = file.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  }, false);
+</script>

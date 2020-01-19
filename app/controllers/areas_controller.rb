@@ -1,4 +1,6 @@
 class AreasController < ApplicationController
+  before_action :log_in?
+  
   def index
     @area = Area.new
   end

@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  before_action :log_in?
+  
   def index
     @profile = Profile.new
     @profile_created = current_user.profile

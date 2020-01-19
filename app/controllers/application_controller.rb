@@ -1,10 +1,14 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
+  helper_method :current_user, :user
   def log_in(user)
     session[:user_id] = user.id
     user.update_remember_digest
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
+  end
+
+  def user
+    User.find(1)
   end
 
   def current_user
@@ -23,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def log_in?
-    !current_user.nil?
+    redirect_to sign_in_path if current_user.nil?
   end
 
   def sign_out

@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :log_in?
+  
   def create
     @project = Project.new(project_params)
     @project.save

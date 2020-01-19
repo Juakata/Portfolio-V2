@@ -42,6 +42,14 @@ a {
   text-decoration: none;
 }
 
+.center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 15px;
+}
+
 /** Media Icons **/
 
 .myfa {
@@ -431,6 +439,44 @@ a {
   max-width: 100%;
   margin: 0;
   margin-top: 0;
+}
+
+.maintenance {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.normal {
+  background: grey;
+  padding: 10px;
+  color: #d9d9d9;
+}
+
+.act {
+  background: red;
+  padding: 10px 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 1px 0px 10px #ff0000;
+  color: white;
+}
+
+.act-normal {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.deact {
+  background: green;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 1px 10px #00b029;
+  color: white;
+}
+
+.deact-normal {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /** Media Queries **/

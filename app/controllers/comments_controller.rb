@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :maintenance?
   def index
     @comment = Comment.new
     @user = User.first
@@ -25,5 +26,9 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:name, :email, :body)
+  end
+
+  def maintenance?
+    redirect_to main_path if user.maintenance
   end
 end
