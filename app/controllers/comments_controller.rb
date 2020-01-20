@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :maintenance?
+  before_action :maintenance?, except: [:all_messages]
   def index
     @comment = Comment.new
     @user = User.first
