@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_20_160031) do
+ActiveRecord::Schema.define(version: 2020_01_19_172145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_01_20_160031) do
   end
 
   create_table "projects", force: :cascade do |t|
+    t.string "title"
     t.string "image"
     t.text "description"
     t.string "github"
@@ -58,7 +59,6 @@ ActiveRecord::Schema.define(version: 2020_01_20_160031) do
     t.integer "area_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "title"
   end
 
   create_table "users", force: :cascade do |t|
