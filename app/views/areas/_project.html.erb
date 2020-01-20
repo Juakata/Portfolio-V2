@@ -1,24 +1,45 @@
   <h2 class="title1 white-block">
     ── <%= @area.name %> ──
   </h2>
-  <%= form_for(@project, html: {class: 'form project_form'}) do |f| %>
-    <%= f.hidden_field :area_id, value: @area.id %>
-    <div class="form-element">
-      <%= f.file_field :image, accept: 'image/jpg,image/gif,image/png'  %>
-    </div>
-    <div class="form-element">
-      <%= f.text_area :description %>
-    </div>
-    <div class="form-element">
-      <%= f.text_field :github %>
-    </div>
-    <div class="form-element">
-      <%= f.text_field :live %>
-    </div>
-    <div class="form-element">
-      <%= f.submit "Save" %>
-    </div>
-  <% end %>
+  <div id="form-project">
+    <%= form_for(@project, html: {class: 'form project_form'}) do |f| %>
+      <%= f.hidden_field :area_id, value: @area.id %>
+      <div class="form-element">
+        <%= f.label :title %>
+        <%= f.text_field :title, autofocus: true %>
+      </div>
+      <div class="form-element">
+        <%= f.file_field :image, accept: 'image/jpg,image/gif,image/png'  %>
+      </div>
+      <div class="form-element">
+        <%= f.text_area :description %>
+      </div>
+      <div class="form-element">
+        <%= f.label :github %>
+        <%= f.text_field :github %>
+      </div>
+      <div class="form-element">
+        <%= f.label :live %>
+        <%= f.text_field :live %>
+      </div>
+      <div class="form-element">
+        <%= f.submit "Save" %>
+      </div>
+    <% end %>
+  </div>
+
+  <h2 class="title1 white-block">Projects</h2>
+  <div class="grid-2">
+    <% @projects.each do |project| %>
+      <div class="project-show">
+        <%= project.title %>
+        <span class="right">
+          <%= link_to "", edit_project_form_path(project.id), class: 'fas fa-edit', remote: true %>
+          <%= link_to "", project_path(project.id), method: :delete, class: 'fas fa-trash' %>
+        </span>
+      </div>
+    <% end %>
+  </div>
 
 <script type="text/javascript">
   var file = document.getElementById('project_image');

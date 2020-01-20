@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :profiles
   resources :networks
   resources :projects
+  get 'edit_project_form/:id', to: 'areas#edit_project_form', as: 'edit_project_form'
   get '/maintenance', to: 'maintenances#main', as: 'main'
   get '/activate', to: 'users#activate', as: 'activate'
   get '/deactivate', to: 'users#deactivate', as: 'deactivate'

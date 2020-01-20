@@ -1,6 +1,6 @@
 class AreasController < ApplicationController
   before_action :log_in?
-  
+
   def index
     @area = Area.new
   end
@@ -20,6 +20,11 @@ class AreasController < ApplicationController
   def form_project
     @project = Project.new
     @area = current_user.areas.find(params[:id])
+    @projects = @area.projects.order(created_at: :asc)
+  end
+
+  def edit_project_form
+    @project = Project.find(params[:id])
   end
 
   private

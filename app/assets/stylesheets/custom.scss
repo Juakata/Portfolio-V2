@@ -42,6 +42,10 @@ a {
   text-decoration: none;
 }
 
+.right {
+  float: right;
+}
+
 .center {
   text-align: center;
 }
@@ -433,6 +437,7 @@ a {
   background: white;
   box-shadow: 1px 1px 10px black;
   padding: 5px;
+  border-radius: 10px;
 }
 
 .project_form {
@@ -479,6 +484,24 @@ a {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   pointer-events: none;
+}
+
+.project-show {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+}
+
+.project-show .fa-edit {
+  color: green;
+}
+
+.project-show .fa-trash {
+  color: red;
+}
+
+.project-show .fa-edit:hover, .fa-trash:hover {
+  color: white;
 }
 
 /** Media Queries **/
