@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates :password, presence: true
   has_many :comments, dependent: :delete_all
   has_many :areas, dependent: :delete_all

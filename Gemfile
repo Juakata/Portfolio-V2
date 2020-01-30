@@ -16,9 +16,11 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem "google-cloud-storage", "~> 1.8", require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.9'
 end
 
 group :development do
@@ -35,7 +37,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'fog', '1.42'
 end
 
