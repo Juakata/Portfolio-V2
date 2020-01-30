@@ -16,7 +16,9 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'fog-google'
+gem "fog-google"
+gem "google-api-client", "> 0.8.5", "< 0.9"
+gem "mime-types"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -37,7 +39,6 @@ group :test do
 end
 
 group :production do
-  gem 'fog', '1.42'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
