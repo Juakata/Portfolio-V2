@@ -5,5 +5,5 @@ CarrierWave.configure do |config|
         google_storage_access_key_id: ENV['GOOGLE_STORAGE_ACCESS_KEY_ID'],
         google_storage_secret_access_key: ENV['GOOGLE_STORAGE_SECRET_ACCESS_KEY']
     }
-    config.fog_directory = Rails.application.secrets.google_cloud_storage_bucket_name
+    config.fog_directory = 'portfolio-segmento-1'
 end
