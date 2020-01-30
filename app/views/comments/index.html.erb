@@ -15,7 +15,7 @@
     </ul>
   </div>
   <% @user.areas.each do |area| %>
-    <h2 class="title1" id="html-title">── <%= area.name %>──</h2>
+    <h2 class="title1" id="area-<%= area.id %>">── <%= area.name %>──</h2>
 
     <div class="info-div grid-2">
       <% area.projects.each do |project| %>

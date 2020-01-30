@@ -19,6 +19,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "fog-google"
 gem "google-api-client", "> 0.8.5", "< 0.9"
 gem "mime-types"
+gem "dotenv-rails"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -239,7 +239,6 @@ a {
   color: white;
   font-size: 70px;
   z-index: 3;
-  pointer-events: none;
   opacity: 0;
   transition: top .7s, opacity .5s;
 }
@@ -247,7 +246,6 @@ a {
 .project:hover .go-icon {
   top: 40%;
   opacity: 1;
-  pointer-events: all;
 }
 
 .project:hover .block-cover {
