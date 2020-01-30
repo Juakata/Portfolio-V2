@@ -8,6 +8,7 @@
 /.bundle
 
 # Ignore secrets folder
+/config/secrets.yml
 /config/secrets/*
 
 # Ignore the default SQLite database.
