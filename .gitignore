@@ -10,6 +10,7 @@
 # Ignore secrets folder
 /config/secrets.yml
 /config/secrets/*
+.env
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
