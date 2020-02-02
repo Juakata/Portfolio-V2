@@ -42,6 +42,11 @@ a {
   text-decoration: none;
 }
 
+.info-div p {
+  text-align: justify;
+  margin-right: 25px;
+}
+
 .right {
   float: right;
 }
@@ -504,6 +509,13 @@ a {
   color: white;
 }
 
+.p-views {
+  margin-top: 50px;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 3px blue;
+}
+
 /** Media Queries **/
 @media(max-width: 700px) {
   header {
@@ -527,8 +539,12 @@ a {
   }
 
   .info-div {
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 15px;
+  }
+
+  .info-div p {
+    margin-right: 0;
   }
 
   .abilities {

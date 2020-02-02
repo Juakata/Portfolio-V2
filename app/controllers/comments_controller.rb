@@ -3,6 +3,8 @@ class CommentsController < ApplicationController
   def index
     @comment = Comment.new
     @user = User.first
+    views = @user.profile.views;
+    @user.profile.update(views: (views + 1))
   end
 
   def create

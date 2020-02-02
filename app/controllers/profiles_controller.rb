@@ -1,7 +1,8 @@
 class ProfilesController < ApplicationController
   before_action :log_in?
-  
+
   def index
+    @views = current_user.profile.views;
     @profile = Profile.new
     @profile_created = current_user.profile
     @network = Network.new

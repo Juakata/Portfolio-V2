@@ -8,7 +8,7 @@
     <% end %>
   </div>
 </div>
-
+<p class="p-views">Views <%= @views %></p>
 <% @profile = @profile_created if @profile_created %>
 <%= form_for(@profile, html: {class: 'form profile-form'}) do |f| %>
   <div class="form-element">
