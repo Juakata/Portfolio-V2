@@ -14,7 +14,7 @@ gem 'jquery', '~> 0.0.1'
 gem 'pg'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'carrierwave',             '1.2.2'
-gem 'mini_magick',             '4.7.0'
+gem 'mini_magick',             '4.9.4'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem "fog-google"
 gem "google-api-client", "> 0.8.5", "< 0.9"
