@@ -40,3 +40,16 @@
 <footer>
   Made by Andoni Uzquiano
 </footer>
+
+<script type="text/javascript">
+  const projects = document.querySelectorAll('.project');
+  projects.forEach(project => {
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting === true) {
+        entries[0].target.style.opacity = '1';
+      }
+    }, { threshold: [.3] });
+
+    observer.observe(project);
+  });
+</script>
