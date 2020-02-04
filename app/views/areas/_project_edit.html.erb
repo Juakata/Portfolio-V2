@@ -1,0 +1,23 @@
+<%= form_for(@project, html: {class: 'form project_form'}) do |f| %>
+  <div class="form-element">
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true %>
+  </div>
+  <div class="form-element">
+    <%= f.file_field :image, accept: 'image/jpg,image/gif,image/png'  %>
+  </div>
+  <div class="form-element">
+    <%= f.text_area :description %>
+  </div>
+  <div class="form-element">
+    <%= f.label :github %>
+    <%= f.text_field :github %>
+  </div>
+  <div class="form-element">
+    <%= f.label :live %>
+    <%= f.text_field :live %>
+  </div>
+  <div class="form-element">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

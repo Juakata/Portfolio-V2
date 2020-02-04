@@ -1,0 +1,42 @@
+<%= render 'header' %>
+<main>
+  <h2 class="title1">── My Story ──</h2>
+  <div class="info-div grid-2">
+    <% if @user.profile %>
+      <%= simple_format(@user.profile.intro, wrapper_tag: "p") %>
+    <% else %>
+      <p>No story created.</p>
+    <% end %>
+    <ul class="abilities">
+      <li id="main-areas">Proficient in</li>
+      <% @user.areas.each do |area| %>
+        <li><a href="#area-<%= area.id %>">● <%= area.name %> </a></li>
+      <% end %>
+    </ul>
+  </div>
+  <% @user.areas.each do |area| %>
+    <h2 class="title1" id="area-<%= area.id %>">── <%= area.name %>──</h2>
+
+    <div class="info-div grid-2">
+      <% area.projects.each do |project| %>
+        <div class="project">
+          <img src="<%= project.image.url %>" class="img-class" alt="project">
+          <p class="p-project"><%= project.description %></p>
+          <a class="block-cover"></a>
+          <div class="go-icon">
+            <a href="<%= project.github %>" target="_blank"><i class="fab fa-github"></i></a>
+            <% if project.live != "" %>
+              <a href="<%= project.live %>" target="_blank"><i class="fas fa-globe"></i></a>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <h2 class="title1">── Get in touch! ──</h2>
+  <%= render 'form' %>
+</main>
+
+<footer>
+  Made by Andoni Uzquiano
+</footer>

@@ -1,0 +1,21 @@
+<header>
+  <ul class="ul-header ul-photo">
+    <li id="li-photo"><a href="#comment_form">
+      <% if @user.profile %>
+        <%= image_tag @user.profile.photo.url, class: 'photo', alt: 'photo' %>
+      <% else %>
+        <img class="photo" src="<%= asset_path('default_profile.png') %>" alt="photo">
+      <% end %>
+    </a></li>
+  </ul>
+  <ul class="ul-header">
+    <% if @user.network %>
+      <li class="li-icon"><a href="<%= @user.network.github %>" target="_blank"><i class="fab fa-github-square myfa"></i></a></li>
+      <li class="li-icon"><a href="<%= @user.network.linkedin %>" target="_blank"><i class="fab fa-linkedin myfa"></i></a></li>
+      <li class="li-icon"><a href="mailto:<%= @user.network.gmail %>" target="_blank"><i class="fas fa-envelope myfa"></i></a></li>
+      <li class="li-icon"><a href="<%= @user.network.twitter %>" target="_blank"><i class="fab fa-twitter-square myfa"></i></a></li>
+      <li class="li-icon"><a href="<%= @user.network.instagram %>" target="_blank"><i class="fab fa-instagram myfa"></i></a></li>
+    <% end %>
+  </ul>
+  <img class="img-back-header" src="<%= asset_path('coding.jpg') %>" alt="coding">
+</header>

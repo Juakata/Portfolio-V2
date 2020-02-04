@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create!(name:  "Juakata",
+             password: "Fghjfghj456")
+
+Area.create!(name: "HTML & CSS", user_id: 1)
+Area.create!(name: "Ruby", user_id: 1)
+Area.create!(name: "Ruby on Rails", user_id: 1)
+Area.create!(name: "Javascript", user_id: 1)
+
+Network.create!(github: "https://github.com/Juakata",
+                linkedin: "https://www.linkedin.com/in/andoni-uzquiano-31304818a",
+                gmail: "juakata07@gmail.com",
+                twitter: "https://twitter.com/HUzquiano",
+                instagram: "https://www.instagram.com/uzquiano007",
+                user_id: 1)

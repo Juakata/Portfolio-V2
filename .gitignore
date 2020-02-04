@@ -7,6 +7,11 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore secrets folder
+/config/secrets.yml
+/config/secrets/*
+.env
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -24,6 +29,7 @@
 
 /public/assets
 .byebug_history
+/public/uploads
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key

@@ -1,0 +1,20 @@
+<header>
+  <ul class="ul-header ul-user">
+    <li class="li-user"><%= link_to 'Messages', all_messages_path, remote: true %></li>
+    <li class="li-user" id="li-photo">
+      <%= link_to profiles_path, remote: true do %>
+        <% if current_user.profile %>
+          <%= image_tag current_user.profile.photo.url, class: 'photo', alt: 'profile_photo' %>
+        <% else %>
+          <img class="photo" src="<%= asset_path('default_profile.png') %>" alt="photo">
+        <% end %>
+      <% end %>
+    </li>
+    <li class="li-user"><%= link_to "Skills", areas_path, remote: true %></li>
+  </ul>
+  <img class="img-back-header" src="<%= asset_path('coding.jpg') %>" alt="coding">
+</header>
+
+<main id="main" class="user-main">
+  <%= render 'areas/index' %>
+</main>

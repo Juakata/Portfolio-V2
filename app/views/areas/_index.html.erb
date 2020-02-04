@@ -1,0 +1,23 @@
+<div class="grid-2">
+  <%= form_for(@area, html: {class: 'form form-areas'}) do |f| %>
+    <div class="form-element">
+      <%= f.text_field :name %>
+    </div>
+    <div class="form-element">
+      <%= f.submit "Add skill"%>
+    </div>
+  <% end %>
+  <ul class="skills-saved">
+    <% if current_user.areas.any? %>
+      <% current_user.areas.each do |area| %>
+        <li>
+          <%= link_to area.name, form_project_path(area.id), remote: true %>
+          <%= link_to "", area_path(area.id), method: :delete, class: 'fas fa-trash' %>
+        </li>
+      <% end %>
+    <% else %>
+      <li>No Skills added.</li>
+    <% end %>
+  </ul>
+</div>
+<div id="project"></div>

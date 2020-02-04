@@ -1,0 +1,65 @@
+<div class="maintenance center">
+  Maintenance
+  <div class="margin-top">
+    <% if current_user.maintenance %>
+      <%= link_to "Activate", activate_path, class: 'act-normal normal' %><%= link_to "Deactivate", deactivate_path, class: 'normal deact' %>
+    <% else %>
+      <%= link_to "Activate", activate_path, class: 'normal act' %><%= link_to "Deactivate", deactivate_path, class: 'deact-normal normal' %>
+    <% end %>
+  </div>
+</div>
+<p class="p-views">Views <%= @views %></p>
+<% @profile = @profile_created if @profile_created %>
+<%= form_for(@profile, html: {class: 'form profile-form'}) do |f| %>
+  <div class="form-element">
+    <%= f.file_field :photo, accept: 'image/jpg,image/gif,image/png'  %>
+  </div>
+  <div class="form-element">
+    <%= f.text_area :intro %>
+  </div>
+  <div class="form-element">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
+
+<% @network = @network_created if @network_created %>
+<%= form_for(@network, html: {class: 'form profile-form'}) do |f| %>
+  <div class="form-element">
+    <%= f.label :github %>
+    <%= f.text_field :github %>
+  </div>
+
+  <div class="form-element">
+    <%= f.label :linkedin %>
+    <%= f.text_field :linkedin %>
+  </div>
+
+  <div class="form-element">
+    <%= f.label :gmail %>
+    <%= f.text_field :gmail %>
+  </div>
+
+  <div class="form-element">
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter %>
+  </div>
+
+  <div class="form-element">
+    <%= f.label :instagram %>
+    <%= f.text_field :instagram %>
+  </div>
+
+  <div class="form-element">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  var photo = document.getElementById('profile_photo');
+  photo.addEventListener('change', () => {
+    let size_in_megabytes = photo.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  }, false);
+</script>

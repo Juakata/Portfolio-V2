@@ -1,0 +1,13 @@
+<%= form_for(:session, html: {class: 'form'}) do |f| %>
+  <div class="form-element">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-element">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="form-element">
+    <%= f.submit "Sign In" %>
+  </div>
+<% end %>

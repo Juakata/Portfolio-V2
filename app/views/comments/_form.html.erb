@@ -1,0 +1,27 @@
+<%= form_for(@comment, remote: true, html: {id: 'comment_form'}) do |f| %>
+<div class="notice" id="notice_message"></div>
+  <% if @comment.errors.any? %>
+    <ul class="erros">
+      <% @comment.errors.full_messages.each do |ms| %>
+         <li> <%= ms %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div class="icon-comment">
+    <i class="fas fa-comments"></i>
+  </div>
+  <div class="form-element">
+    <%= f.label :name %>
+    <%= f.text_field :name, autocomplete: "name", class: "field_group" %>
+  </div>
+  <div class="form-element">
+  <%= f.label :email %>
+  <%= f.email_field :email, autocomplete: "email", class: "field_group" %>
+  </div>
+  <div class="form-element">
+  <%= f.text_area :body, autocomplete: "comment", class: "field_group" %>
+  </div>
+  <div class="form-element">
+  <%= f.submit "Send" %>
+  </div>
+<% end %>
