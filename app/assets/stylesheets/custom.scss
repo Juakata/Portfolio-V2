@@ -160,7 +160,7 @@ a {
 
 .welcome {
   color: white;
-  padding-top: 13%;
+  padding-top: 15%;
   text-align: center;
   position: absolute;
   top: 0;
@@ -197,17 +197,16 @@ a {
   height: 50px;
   position: absolute;
   z-index: -1;
-
 }
 
 .circle {
-  background: blue;
+  background: #002b70;
   animation: back-animation-1 10s infinite;
 }
 
 .circle2 {
   right: 0;
-  background: green;
+  background: #717891;
   animation: back-animation-2 10s infinite;
 }
 
