@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   background: #e0e0e0;
+  overflow: hidden;
 }
 
 header {
@@ -155,6 +156,103 @@ a {
   color: #001052;
   text-shadow: 1px 1px 1px white;
   box-shadow: 0 0 8px #190033;
+}
+
+.welcome {
+  color: white;
+  padding-top: 13%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: RGBA(0, 0, 0, .94);
+}
+
+.welcome button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #001f52;
+  color: white;
+  font-size: 15px;
+  z-index: 5;
+}
+
+.welcome p {
+  z-index: 9;
+}
+
+.welcome button:hover {
+  background: white;
+  color: #001f52;
+}
+
+.circle, .circle2 {
+  background: grey;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: -1;
+
+}
+
+.circle {
+  background: blue;
+  animation: back-animation-1 10s infinite;
+}
+
+.circle2 {
+  right: 0;
+  background: green;
+  animation: back-animation-2 10s infinite;
+}
+
+@keyframes back-animation-1 {
+  20%{
+    opacity: 0;
+    transform: translate(100vw, -45vh);
+  }
+  40%{
+    opacity: 1;
+    transform: translate(0,45vh);
+  }
+  60%{
+    opacity: 0;
+    transform: translate(0, -45vh);
+  }
+  80%{
+    opacity: 1;
+    transform: translate(100vw,-45vh);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes back-animation-2 {
+  20%{
+    opacity: 0;
+    transform: translate(-100vw, -45vh);
+  }
+  40%{
+    opacity: 1;
+    transform: translate(0, 45vh);
+  }
+  60%{
+    opacity: 0;
+    transform: translate(0, -45vh);
+  }
+  80%{
+    opacity: 1;
+    transform: translate(-100vw,-45vh);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
 }
 
 .title1 {
@@ -530,6 +628,7 @@ a {
 
   .ul-photo {
     width: 100%;
+    z-index: 10;
   }
 
   .grid-2 {
