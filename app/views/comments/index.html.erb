@@ -1,5 +1,12 @@
 <%= render 'header' %>
 <main>
+  <div class="welcome">
+    <img src="<%= @user.profile.photo.url %>" alt="photo" class="photo">
+    <p id="welcome-p"></p>
+    <button type="button" onclick="welcome()">Know more about me!</button>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+  </div>
   <h2 class="title1">── My Story ──</h2>
   <div class="info-div grid-2">
     <% if @user.profile %>
@@ -40,3 +47,35 @@
 <footer>
   Made by Andoni Uzquiano
 </footer>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    window.scrollTo(0,0);
+    typeWriter();
+  });
+  const txt = "Hi, I am a junior developer.";
+  let i = 0;
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("welcome-p").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, 75);
+    }
+  }
+
+  function welcome() {
+    document.querySelector('.welcome').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  const projects = document.querySelectorAll('.project');
+  projects.forEach(project => {
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting === true) {
+        entries[0].target.style.opacity = '1';
+      }
+    }, { threshold: [.3] });
+
+    observer.observe(project);
+  });
+</script>
