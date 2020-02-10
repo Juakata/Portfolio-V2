@@ -50,8 +50,9 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
-    window.scrollTo(0,0);
-    typeWriter();
+    window.scrollTo(0, 0);
+    document.body.style.overflow = 'hidden';
+    setTimeout(typeWriter, 1000);
   });
   const txt = "Hi, I am a junior developer.";
   let i = 0;
