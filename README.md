@@ -50,7 +50,7 @@ go to http://localhost:3000/
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Juakata/Battleship-JS/issues).
+Feel free to check the [issues page](https://github.com/Juakata/Portfolio-V2/issues).
 
 ## Show your support
 
