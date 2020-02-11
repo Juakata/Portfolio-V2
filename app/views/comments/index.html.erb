@@ -60,9 +60,12 @@
   }
 
   $(document).ready(() => {
-    setTimeout(() => window.scrollTo(0, 0), 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+    }, 0);
     document.body.style.overflow = 'hidden';
-    setTimeout(typeWriter, 1000);  
+    setTimeout(typeWriter, 1000);
   });
 
   function welcome() {
