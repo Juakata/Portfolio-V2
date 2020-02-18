@@ -17,7 +17,7 @@
     <ul class="abilities">
       <li id="main-areas">Proficient in</li>
       <% @user.areas.each do |area| %>
-        <li><a href="#area-<%= area.id %>">● <%= area.name %> </a></li>
+        <li>● <%= area.name %></li>
       <% end %>
     </ul>
   </div>
@@ -45,7 +45,7 @@
 </main>
 
 <footer>
-  Made by Andoni Uzquiano
+  Made by Andoni Uzquiano.
 </footer>
 
 <script type="text/javascript">
