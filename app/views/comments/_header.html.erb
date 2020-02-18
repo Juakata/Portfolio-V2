@@ -1,12 +1,12 @@
 <header>
   <ul class="ul-header ul-photo">
-    <li id="li-photo"><a href="#comment_form">
+    <li id="li-photo">
       <% if @user.profile %>
         <%= image_tag @user.profile.photo.url, class: 'photo', alt: 'photo' %>
       <% else %>
         <img class="photo" src="<%= asset_path('default_profile.png') %>" alt="photo">
       <% end %>
-    </a></li>
+    </li>
   </ul>
   <ul class="ul-header">
     <% if @user.network %>
