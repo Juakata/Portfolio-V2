@@ -1,6 +1,6 @@
 # Portfolio-V2
 
-> This project is my second portfolio, this time with something special the portfolio is completely handled by a user that means anyone can build a portfolio from scratch with this project.
+> This project is the second portfolio I built, this time with something special: the portfolio is completely handled by the user, which means that anyone can use this project to build a portfolio from scratch.
 
 ![library](https://storage.googleapis.com/portfolio-segmento-1/uploads/project/image/21/portfolio.png)
 
@@ -44,7 +44,7 @@ go to http://localhost:3000/
 
 - Github: [@Juakata](https://github.com/Juakata)
 - Twitter: [@HUzquiano](https://twitter.com/HUzquiano)
-- Linkedin: [linkedin](https://www.linkedin.com/in/andoni-uzquiano-31304818a/)
+- Linkedin: [@Andoni](https://www.linkedin.com/in/andoni-uzquiano-31304818a/)
 
 ## 🤝 Contributing
 
@@ -58,4 +58,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MiT](https://opensource.org/licenses/MIT) licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
