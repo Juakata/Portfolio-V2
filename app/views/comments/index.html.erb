@@ -18,7 +18,7 @@
     <ul class="abilities">
       <li id="main-areas">Proficient in</li>
       <% @user.areas.each do |area| %>
-        <li><a href="#area-<%= area.id %>">● <%= area.name %> </a></li>
+        <li>● <%= area.name %></li>
       <% end %>
     </ul>
   </div>
@@ -46,15 +46,10 @@
 </main>
 
 <footer>
-  Made by Andoni Uzquiano
+  Made by Andoni Uzquiano.
 </footer>
 
 <script type="text/javascript">
-  $(document).ready(function () {
-    window.scrollTo(0, 0);
-    document.body.style.overflow = 'hidden';
-    setTimeout(typeWriter, 1000);
-  });
   const txt = "Hi, I am a junior developer.";
   let i = 0;
   function typeWriter() {
@@ -64,6 +59,16 @@
       setTimeout(typeWriter, 75);
     }
   }
+
+  $(document).ready(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.body.scrollTo = 0;
+    }, 500);
+
+    document.body.style.overflow = 'hidden';
+    setTimeout(typeWriter, 1000);
+  });
 
   function welcome() {
     document.querySelector('.welcome').style.display = 'none';
