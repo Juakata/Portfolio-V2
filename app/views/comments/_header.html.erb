@@ -1,7 +1,7 @@
 <header>
   <ul class="ul-header ul-photo">
     <li id="li-photo"><a href="#comment_form">
-      <% if @user.profile %>
+      <% if @user.profile.photo? %>
         <%= image_tag @user.profile.photo.url, class: 'photo', alt: 'photo' %>
       <% else %>
         <img class="photo" src="<%= asset_path('default_profile.png') %>" alt="photo">
