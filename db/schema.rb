@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_02_195906) do
+ActiveRecord::Schema.define(version: 2020_03_30_200328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,14 @@ ActiveRecord::Schema.define(version: 2020_02_02_195906) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "remember_digest"
     t.boolean "maintenance"
+  end
+
+  create_table "views", force: :cascade do |t|
+    t.integer "count"
+    t.string "city"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
