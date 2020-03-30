@@ -157,6 +157,25 @@ a {
   box-shadow: 0 0 8px #190033;
 }
 
+#views {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1000px;
+  border-radius: 20px;
+  z-index: 10;
+  padding: 20px;
+  background: white;
+  top: 30%;
+  max-height: 80vh;
+  overflow: auto;
+  box-shadow: 0 0 3px black;
+}
+
 .welcome {
   color: white;
   padding-top: 15%;
@@ -615,6 +634,13 @@ a {
   text-shadow: 1px 1px 3px blue;
 }
 
+.view {
+  background: grey;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 3px blue;
+}
+
 /** Media Queries **/
 @media(max-width: 700px) {
   header {
@@ -628,6 +654,11 @@ a {
   .ul-photo {
     width: 100%;
     z-index: 10;
+  }
+
+  #views {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-2 {

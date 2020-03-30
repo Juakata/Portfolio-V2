@@ -8,7 +8,16 @@
     <% end %>
   </div>
 </div>
-<p class="p-views">Views <%= @views %></p>
+<p id="totalviews" class="p-views">Views <%= @total_views %></p>
+<div id="views">
+  <% @views.each do |view| %>
+    <div class="view">
+      <h2><%= view.city %></h2>
+      <h3><%= view.count %></h3>
+    </div>
+  <% end %>
+  <button type="button" id="closeviews">Close</button>
+</div>
 <% @profile = @profile_created if @profile_created %>
 <%= form_for(@profile, html: {class: 'form profile-form'}) do |f| %>
   <div class="form-element">
@@ -61,5 +70,16 @@
     if (size_in_megabytes > 5) {
       alert('Maximum file size is 5MB. Please choose a smaller file.');
     }
+  }, false);
+  const totalviews = document.getElementById('totalviews');
+  const views = document.getElementById('views');
+  const closeviews = document.getElementById('closeviews');
+
+  totalviews.addEventListener('click', () => {
+    views.style.display = 'grid';
+  }, false);
+
+  closeviews.addEventListener('click', () => {
+    views.style.display = 'none';
   }, false);
 </script>

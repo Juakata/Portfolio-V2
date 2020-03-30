@@ -2,7 +2,8 @@ class ProfilesController < ApplicationController
   before_action :log_in?
 
   def index
-    @views = current_user.profile.views;
+    @total_views = count_views;
+    @views = current_user.views
     @profile = Profile.new
     @profile_created = current_user.profile
     @network = Network.new
@@ -24,5 +25,13 @@ class ProfilesController < ApplicationController
 
   def profile_params
     params.require(:profile).permit(:photo, :intro)
+  end
+
+  def count_views
+    result = 0
+    current_user.views.each do |view|
+      result += view.count
+    end
+    result
   end
 end
