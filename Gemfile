@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.6.5'
 
 gem 'rails', '~> 6.0.1'
 gem 'puma', '~> 4.1'
@@ -19,7 +19,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "fog-google"
 gem "google-api-client", "> 0.8.5", "< 0.9"
 gem "mime-types"
-gem "dotenv-rails"
+gem 'dotenv-rails'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

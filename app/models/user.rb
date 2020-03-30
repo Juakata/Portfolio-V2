@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :areas, dependent: :delete_all
   has_one :profile, dependent: :destroy
   has_one :network, dependent: :destroy
+  has_many :views, dependent: :destroy
 
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

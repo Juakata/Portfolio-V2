@@ -8,6 +8,8 @@
 User.create!(name:  "Juakata",
              password: "Fghjfghj456")
 
+Profile.create!(user_id: 1)
+
 Area.create!(name: "HTML & CSS", user_id: 1)
 Area.create!(name: "Ruby", user_id: 1)
 Area.create!(name: "Ruby on Rails", user_id: 1)

@@ -3,8 +3,8 @@ class CommentsController < ApplicationController
   def index
     @comment = Comment.new
     @user = User.first
-    views = @user.profile.views;
-    @user.profile.update(views: (views + 1))
+    @city = request.location.city
+    add_view(@user, @city)
   end
 
   def create
@@ -32,5 +32,16 @@ class CommentsController < ApplicationController
 
   def maintenance?
     redirect_to main_path if user.maintenance
+  end
+
+  def add_view(user, city)
+    view = user.views.find_by(city: city)
+    if view
+      count = view.count + 1
+      view.update_attribute(count: count)
+    else
+      view = user.views.build(count: 1, city: city)
+      view.save
+    end
   end
 end
