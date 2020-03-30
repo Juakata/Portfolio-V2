@@ -10,12 +10,14 @@
 </div>
 <p id="totalviews" class="p-views">Views <%= @total_views %></p>
 <div id="views">
-  <% @views.each do |view| %>
-    <div class="view">
-      <h2><%= view.city %></h2>
-      <h3><%= view.count %></h3>
-    </div>
-  <% end %>
+  <div class="grid-4">
+    <% @views.each do |view| %>
+        <div class="view">
+          <h2><%= view.city %></h2>
+          <h3><%= view.count %></h3>
+      </div>
+    <% end %>
+  </div>
   <button type="button" id="closeviews">Close</button>
 </div>
 <% @profile = @profile_created if @profile_created %>
@@ -76,7 +78,7 @@
   var closeviews = document.getElementById('closeviews');
 
   totalviews.addEventListener('click', () => {
-    views.style.display = 'grid';
+    views.style.display = 'block';
   }, false);
 
   closeviews.addEventListener('click', () => {
