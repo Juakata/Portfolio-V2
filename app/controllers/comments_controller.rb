@@ -38,7 +38,7 @@ class CommentsController < ApplicationController
     view = user.views.find_by(city: city)
     if view
       count = view.count + 1
-      view.update_attribute(count: count)
+      view.update_attribute(:count, count)
     else
       view = user.views.build(count: 1, city: city)
       view.save
