@@ -19,7 +19,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "fog-google"
 gem "google-api-client", "> 0.8.5", "< 0.9"
 gem "mime-types"
-gem "dotenv-rails"
+gem 'dotenv-rails'
 gem 'geocoder'
 
 group :development, :test do
