@@ -1,6 +1,6 @@
 # Portfolio-V2
 
-> This project is the second portfolio I built, this time with something special: the portfolio is completely handled by the user, which means that anyone can use this project to build a portfolio from scratch.
+> This project is the second portfolio I built, this time with something special: the portfolio is completely handled by the user, which means that anyone can use this project to build a portfolio from scratch. The website gives you the option to upload your picture, your social media links, and for your projects, you can also upload an image, description, and links to the live website or the Github repository.
 
 ![library](https://storage.googleapis.com/portfolio-segmento-1/uploads/project/image/21/portfolio.png)
 
