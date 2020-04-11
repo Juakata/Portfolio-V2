@@ -18,7 +18,7 @@
     <ul class="abilities">
       <li id="main-areas">Proficient in</li>
       <% @user.areas.each do |area| %>
-        <li>● <%= area.name %></li>
+        <li><a href="#area-<%= area.id %>">● <%= area.name %></a></li>
       <% end %>
     </ul>
   </div>
@@ -60,15 +60,15 @@
     }
   }
 
-  $(document).onload(() => {
+  window.onload = function() {
+    document.querySelector('.welcome').style.display = 'block';
+    document.body.style.overflow = 'hidden';
     setTimeout(() => {
       window.scrollTo(0, 0);
       document.body.scrollTo = 0;
     }, 500);
-
-    document.body.style.overflow = 'hidden';
     setTimeout(typeWriter, 1000);
-  });
+  };
 
   function welcome() {
     document.querySelector('.welcome').style.display = 'none';
