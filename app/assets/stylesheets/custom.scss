@@ -168,7 +168,7 @@ a {
   z-index: 10;
   padding: 20px;
   background: #001333;
-  top: 30%;
+  top: 15%;
   max-height: 80vh;
   overflow: auto;
   box-shadow: 0 0 100px #8cb7ff;
@@ -637,6 +637,11 @@ a {
   text-align: center;
   color: black;
   text-shadow: 1px 1px 3px blue;
+  cursor: pointer;
+}
+
+.p-views:hover {
+  text-shadow: 0 0 10px blue;
 }
 
 .view {
