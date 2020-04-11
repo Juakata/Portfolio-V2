@@ -50,8 +50,8 @@
 </footer>
 
 <script type="text/javascript">
-  const txt = "Hi, I am a junior developer.";
-  let i = 0;
+  var txt = "Hi, I am a junior developer.";
+  var i = 0;
   function typeWriter() {
     if (i < txt.length) {
       document.getElementById("welcome-p").innerHTML += txt.charAt(i);
@@ -75,7 +75,7 @@
     document.body.style.overflow = 'auto';
   }
 
-  const projects = document.querySelectorAll('.project');
+  var projects = document.querySelectorAll('.project');
   projects.forEach(project => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting === true) {
