@@ -23,7 +23,7 @@
 ```
 git clone https://github.com/Juakata/Portfolio-V2.git
 ```
-2. Before start run
+2. Before starting, run:
 ```
 bundle install
 ```
