@@ -18,7 +18,7 @@
     <ul class="abilities">
       <li id="main-areas">Proficient in</li>
       <% @user.areas.each do |area| %>
-        <li>● <%= area.name %></li>
+        <li><a href="#area-<%= area.id %>">● <%= area.name %></a></li>
       <% end %>
     </ul>
   </div>
@@ -50,8 +50,8 @@
 </footer>
 
 <script type="text/javascript">
-  const txt = "Hi, I am a junior developer.";
-  let i = 0;
+  var txt = "Hi, I am a junior developer.";
+  var i = 0;
   function typeWriter() {
     if (i < txt.length) {
       document.getElementById("welcome-p").innerHTML += txt.charAt(i);
@@ -60,22 +60,22 @@
     }
   }
 
-  $(document).ready(() => {
+  window.onload = function() {
+    document.querySelector('.welcome').style.display = 'block';
+    document.body.style.overflow = 'hidden';
     setTimeout(() => {
       window.scrollTo(0, 0);
       document.body.scrollTo = 0;
     }, 500);
-
-    document.body.style.overflow = 'hidden';
     setTimeout(typeWriter, 1000);
-  });
+  };
 
   function welcome() {
     document.querySelector('.welcome').style.display = 'none';
     document.body.style.overflow = 'auto';
   }
 
-  const projects = document.querySelectorAll('.project');
+  var projects = document.querySelectorAll('.project');
   projects.forEach(project => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting === true) {
