@@ -2,8 +2,8 @@ class ProfilesController < ApplicationController
   before_action :log_in?
 
   def index
-    @total_views = count_views;
-    @views = current_user.views
+    @total_views = count_views
+    @views = current_user.views.order(updated_at: :desc)
     @profile = Profile.new
     @profile_created = current_user.profile
     @network = Network.new
