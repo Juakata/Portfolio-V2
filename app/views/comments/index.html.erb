@@ -46,21 +46,6 @@
 
   <!-- Load Facebook SDK for JavaScript -->
    <div id="fb-root"></div>
-   <script>
-     window.fbAsyncInit = function() {
-       FB.init({
-         xfbml            : true,
-         version          : 'v7.0'
-       });
-     };
-
-     (function(d, s, id) {
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) return;
-     js = d.createElement(s); js.id = id;
-     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));</script>
 
    <!-- Your Chat Plugin code -->
    <div class="fb-customerchat"
@@ -72,17 +57,37 @@
 
   <!-- GetButton.io widget -->
 <script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "50371927328",
-            call_to_action: "Message us",
-            position: "right",
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
+  window.onresize = function(){
+    if(document.body.clientWidth < 700) {
+      (function () {
+          var options = {
+              whatsapp: "50371927328",
+              call_to_action: "Message us",
+              position: "right",
+          };
+          var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+          s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+      })();
+    } else {
+      document.getElementById("wh-widget-send-button").remove();
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v7.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    }
+  }
 </script>
 <!-- /GetButton.io widget -->
 
